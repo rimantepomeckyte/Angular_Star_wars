@@ -1,0 +1,18 @@
+<div class="w-75 mx-auto container">
+  <h1 class="text-center my-2">STAR WARS Characters</h1>
+  <div class="mb-3 d-flex justify-content-center">
+    <input type="text" name="name"
+           class="form-control w-25"
+           placeholder="Enter character name.."
+           [(ngModel)]="name"
+           (ngModelChange)="Search()"
+    />
+  </div>
+  <div *ngFor="let people of starWars" class="px-2 row d-flex justify-content-center">
+    <a [routerLink]="['/characters', extractId(people)]"
+       class="border rounded p-2 col-12 col-md-8 col-lg-6 my-2 text-dark"
+       style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.41); text-decoration: none"
+    ><h5>{{people.name}}
+    </h5></a>
+  </div>
+</div>

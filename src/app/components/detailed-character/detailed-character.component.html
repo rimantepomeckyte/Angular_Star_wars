@@ -1,0 +1,17 @@
+<div class="container py-3">
+  <h3 class="mb-4 text-center">Information about character</h3>
+  <div class="border rounded p-4 col-lg-6 col-md-8 col-10 mx-auto" style="box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.41);">
+    <p><strong>Name: </strong>{{name}}</p>
+    <p><strong>Gender: </strong>{{gender != 'n/a' ? gender : 'no information'}}</p>
+    <p><strong>Birth year: </strong>{{birthYear}}</p>
+    <p><strong>Height: </strong>{{height}} inch</p>
+    <p><strong>Weight: </strong>{{weight != 'unknown' ? weight + ' lb' : weight}}</p>
+    <p><strong>Eye color: </strong>{{eyeColor}}</p>
+    <p><strong>Hair color: </strong>{{hairColor != 'n/a' ? hairColor : 'no information'}}</p>
+    <strong>Films: </strong>
+    <ul *ngFor="let title of filmsTitle">
+      <li>"{{title}}"</li>
+    </ul>
+  </div>
+</div>
+
